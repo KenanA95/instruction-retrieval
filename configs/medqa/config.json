@@ -1,0 +1,43 @@
+{
+  "experiment_name": "medqa_instruction_retrieval",
+  "base_dir": "/shared/3/projects/instruction-retrieval/medqa",
+  "output_dir": "results/medqa",
+  
+  "dataset": {
+    "split": "test",
+    "sample_size": 100
+  },
+  
+  "variants": [
+    "zero_shot",
+    "rag",
+    "instruction_retrieval",
+    "rag_instruction_retrieval"
+  ],
+  
+  "use_rag": true,
+  
+  "retrieval": {
+    "textbook_path": "/shared/3/projects/instruction-retrieval/medqa/textbooks",
+    "top_k": 3
+  },
+  
+  "inference": {
+    "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+    "batch_size": 16,
+    "max_new_tokens": 2048,
+    "temperature": 0.1
+  },
+  
+  "prompt_dirs": {
+    "zero_shot": "data/medqa/templates/zero_shot",
+    "rag": "data/medqa/templates/rag",
+    "instruction_retrieval": "data/medqa/templates/instruction_retrieval",
+    "rag_instruction_retrieval": "data/medqa/templates/rag_instruction_retrieval"
+  },
+  
+  "instruction_dirs": {
+    "general": "data/medqa/instructions/general",
+    "by_topic": "data/medqa/instructions/by_topic"
+  }
+} 

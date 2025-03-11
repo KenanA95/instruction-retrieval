@@ -1,0 +1,43 @@
+{
+  "experiment_name": "casehold_instruction_retrieval",
+  "base_dir": "/shared/3/projects/instruction-retrieval/casehold",
+  "output_dir": "results/casehold",
+  
+  "dataset": {
+    "split": "test",
+    "sample_size": 100
+  },
+  
+  "variants": [
+    "zero_shot",
+    "rag",
+    "instruction_retrieval",
+    "rag_instruction_retrieval"
+  ],
+  
+  "use_rag": true,
+  
+  "retrieval": {
+    "case_law_path": "/shared/3/projects/instruction-retrieval/casehold/case_law",
+    "top_k": 3
+  },
+  
+  "inference": {
+    "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+    "batch_size": 16,
+    "max_new_tokens": 2048,
+    "temperature": 0.1
+  },
+  
+  "prompt_dirs": {
+    "zero_shot": "data/casehold/templates/zero_shot",
+    "rag": "data/casehold/templates/rag",
+    "instruction_retrieval": "data/casehold/templates/instruction_retrieval",
+    "rag_instruction_retrieval": "data/casehold/templates/rag_instruction_retrieval"
+  },
+  
+  "instruction_dirs": {
+    "general": "data/casehold/instructions/general",
+    "by_category": "data/casehold/instructions/by_category"
+  }
+} 

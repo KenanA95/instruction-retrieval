@@ -1,0 +1,62 @@
+{
+  "experiment_name": "math_instruction_retrieval",
+  "base_dir": "/shared/3/projects/instruction-retrieval/mathematics_dataset",
+  "output_dir": "results/math",
+  
+  "dataset": {
+    "file_path": "/shared/3/projects/instruction-retrieval/mathematics_dataset/processed/mvp.tsv",
+    "topics": [
+      "calculus__differentiate_composed",
+      "algebra__polynomial_roots_composed", 
+      "numbers__list_prime_factors_composed"
+    ],
+    "cot_examples_path": "/shared/3/projects/instruction-retrieval/mathematics_dataset/processed/cot_examples_with_solutions.tsv"
+  },
+  
+  "variants": [
+    "baseline",
+    "instructions_baseline",
+    "instructions_concise",
+    "instructions_high_school",
+    "instructions_graduate",
+    "instructions_llm",
+    "few_shot_cot",
+    "instructions_baseline_few_shot_cot",
+    "instructions_concise_few_shot_cot",
+    "instructions_high_school_few_shot_cot",
+    "instructions_graduate_few_shot_cot",
+    "instructions_llm_few_shot_cot"
+  ],
+  
+  "num_cot_examples": 3,
+  
+  "inference": {
+    "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+    "batch_size": 16,
+    "max_new_tokens": 4096,
+    "temperature": 0.1
+  },
+  
+  "prompt_dirs": {
+    "baseline": "data/math/templates/baseline",
+    "instructions_baseline": "data/math/templates/instructions_baseline",
+    "instructions_concise": "data/math/templates/instructions_concise",
+    "instructions_high_school": "data/math/templates/instructions_high_school",
+    "instructions_graduate": "data/math/templates/instructions_graduate",
+    "instructions_llm": "data/math/templates/instructions_llm",
+    "few_shot_cot": "data/math/templates/few_shot_cot",
+    "instructions_baseline_few_shot_cot": "data/math/templates/instructions_baseline_few_shot_cot",
+    "instructions_concise_few_shot_cot": "data/math/templates/instructions_concise_few_shot_cot",
+    "instructions_high_school_few_shot_cot": "data/math/templates/instructions_high_school_few_shot_cot",
+    "instructions_graduate_few_shot_cot": "data/math/templates/instructions_graduate_few_shot_cot",
+    "instructions_llm_few_shot_cot": "data/math/templates/instructions_llm_few_shot_cot"
+  },
+  
+  "instruction_dirs": {
+    "baseline": "data/math/instructions/baseline",
+    "concise": "data/math/instructions/concise",
+    "high_school": "data/math/instructions/high_school",
+    "graduate": "data/math/instructions/graduate",
+    "llm": "data/math/instructions/llm"
+  }
+} 

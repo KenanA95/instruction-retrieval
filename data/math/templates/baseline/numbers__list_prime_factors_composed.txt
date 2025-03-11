@@ -1,0 +1,7 @@
+1. Write down the number you want to factor.  
+2. Begin with the smallest prime number, which is 2.  
+3. Check if 2 divides the number without leaving a remainder.  
+   • If yes, note 2 as a prime factor. Continue dividing by 2 until it no longer divides evenly.  
+   • If no, move on to the next prime number (3, then 5, 7, 11, and so on).  
+4. Continue checking divisibility by each prime, noting it as a factor and dividing out the prime repeatedly until it no longer divides.  
+5. Stop when your reduced number is 1. The prime factors you recorded are the distinct prime factors of the original number.

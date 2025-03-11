@@ -1,0 +1,7 @@
+Write a comprehensive set of instructions to solve {topic} problems. Do not directly use any of the problems in the provided dataset in the instructions.
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+# Example problems
+
+{problems}

@@ -1,6 +1,6 @@
 # Instruction Retrieval Experiment Instructions
 
-This document provides concise instructions for running the instruction retrieval experiment.
+This document provides instructions for running the instruction retrieval experiments across all domains.
 
 ## Prerequisites
 
@@ -9,135 +9,162 @@ This document provides concise instructions for running the instruction retrieva
    pip install -r requirements.txt
    ```
 
-2. Create a `.env` file with your OpenAI API key:
+2. Create a `.env` file with your API keys if needed:
    ```bash
    cp .env.template .env
-   # Edit .env to add your OpenAI API key
+   # Edit .env to add your API keys
    ```
 
-## Step-by-Step Guide
+## Running Experiments
 
-### Step 1: Generate Instruction Prompts
+### Step 1: Run Sanity Checks
 
-Generate instruction prompts for all variants using OpenAI's o1 model:
-
-```bash
-./scripts/generate_instructions.py \
-  --model o1 \
-  --dataset /shared/3/projects/instruction-retrieval/mathematics_dataset/processed/easy_100.tsv \
-  --templates-dir src/data/templates \
-  --output-dir src/data/instructions \
-  --topics calculus__differentiate algebra__polynomial_roots numbers__list_prime_factors \
-  --variants baseline concise high_school graduate llm
-```
-
-This will:
-- Use OpenAI's o1 model to generate instruction prompts
-- Save the generated instructions to the appropriate files
-- Create both the instructions and the prompts used to generate them
-
-### Step 2: Verify Answer Extraction
-
-Run the answer extraction tests to ensure the extraction logic works correctly:
+Before running the full experiments, it's recommended to run sanity checks to ensure each task is set up correctly. Each task has its own dedicated sanity check script:
 
 ```bash
-python -m tests.test_answer_extraction
+# Run Math sanity check
+python scripts/math_sanity_check.py
+
+# Run MedQA sanity check
+python scripts/medqa_sanity_check.py
+
+# Run CaseHOLD sanity check
+python scripts/casehold_sanity_check.py
 ```
 
-### Step 3: Run Sanity Check
+Each sanity check script:
+1. Runs a small number of examples from each prompt variant
+2. Saves the inference results
+3. Runs evaluation on those results
+4. Reports whether the full pipeline is working end-to-end
 
-Run a sanity check on a few problems to verify that:
-- The prompts are generated correctly
-- The model can run on a handful of problems
-- Answers are parsed correctly
+You can customize the sanity checks with options:
 
 ```bash
-# Run with default GPU settings (all available GPUs)
-./run_sanity_check.sh
+# Run with a custom number of examples (default is 2)
+python scripts/math_sanity_check.py --num-examples 3
 
-# Or specify which GPUs to use
-CUDA_VISIBLE_DEVICES=0 ./run_sanity_check.sh
+# Run with a custom config file
+python scripts/math_sanity_check.py --config configs/math/custom_config.json
 ```
 
-You can customize the sanity check with these options:
-```bash
-CUDA_VISIBLE_DEVICES=0,1 ./run_sanity_check.sh \
-  --dataset /path/to/dataset.tsv \
-  --topics calculus__differentiate,algebra__polynomial_roots \
-  --variants baseline,concise \
-  --num-problems 2 \
-  --output-dir results/my_sanity_check
-```
+The sanity check results will be saved in a `sanity_check` subdirectory of each task's results directory.
 
-The sanity check will:
-1. Verify that all required instruction files exist
-2. Run answer extraction tests
-3. Test the model on a small number of problems
-4. Check if any variants have 0% accuracy
+### Step 2: Run the Full Experiments
 
-### Step 4: Run the Full Experiment
-
-Once the sanity checks pass, run the full experiment:
+After the sanity checks pass, run the full experiments:
 
 ```bash
-# Run with default GPU settings (all available GPUs)
-./run_pipeline.sh
+# Run all experiments
+python scripts/run_all_experiments.py --all
 
-# Or specify which GPUs to use
-CUDA_VISIBLE_DEVICES=0,1,2,3 ./run_pipeline.sh
+# Run specific experiments
+python scripts/run_all_experiments.py --math
+python scripts/run_all_experiments.py --medqa
+python scripts/run_all_experiments.py --casehold
+
+# Run multiple experiments
+python scripts/run_all_experiments.py --math --medqa
+
+# Run with custom configurations
+python scripts/run_all_experiments.py --math --math-config configs/math/custom_config.json
 ```
-
-### Alternative: Run the Complete Pipeline
-
-Alternatively, you can run the entire pipeline with a single command:
-
-```bash
-./run_pipeline.sh
-```
-
-This script will:
-1. Generate instruction prompts using OpenAI's o1 model
-2. Run tests to verify answer extraction
-3. Run a sanity check on a few problems
-4. Run the full experiment
 
 ## Experiment Details
 
-- **Models**: 
-  - Inference: Llama-3.2-3B-Instruct
-  - Answer Extraction: Llama-3.1-8B-Instruct
+### Math MVP Experiment
 
+- **Dataset**: DeepMind Analysing Mathematical Reasoning dataset (subset)
+- **Topics**: Polynomials, Integration, Prime Factorization
 - **Variants**:
-  - baseline
-  - few_shot_cot
-  - instructions_baseline
-  - instructions_baseline_few_shot_cot
-  - instructions_concise
-  - instructions_concise_few_shot_cot
-  - instructions_high_school
-  - instructions_high_school_few_shot_cot
-  - instructions_graduate
-  - instructions_graduate_few_shot_cot
-  - instructions_llm
-  - instructions_llm_few_shot_cot
+  - baseline (zero-shot)
+  - few_shot_cot (Chain-of-Thought examples)
+  - instructions_* (various instruction types)
+  - instructions_*_few_shot_cot (instructions + CoT)
 
-- **Topics**:
-  - calculus__differentiate
-  - algebra__polynomial_roots
-  - numbers__list_prime_factors
+### MedQA Experiment
+
+- **Dataset**: MedQA (USMLE) medical questions
+- **Variants**:
+  - zero_shot (baseline)
+  - rag (Retrieval-Augmented Generation with textbook passages)
+  - instruction_retrieval (domain-specific instructions)
+  - rag_instruction_retrieval (RAG + instructions)
+
+### CaseHOLD Experiment
+
+- **Dataset**: CaseHOLD legal holdings dataset
+- **Variants**:
+  - zero_shot (baseline)
+  - rag (Retrieval-Augmented Generation with case law)
+  - instruction_retrieval (domain-specific instructions)
+  - rag_instruction_retrieval (RAG + instructions)
+
+## Generating Instructions
+
+To generate new instructions for any domain:
+
+```bash
+python scripts/generate_instructions.py --domain math --model llama-3.2-3b-instruct
+python scripts/generate_instructions.py --domain medqa --model llama-3.2-3b-instruct
+python scripts/generate_instructions.py --domain casehold --model llama-3.2-3b-instruct
+```
+
+## Prompt Format
+
+The system now uses Markdown formatting for prompts to improve readability and structure. Prompts are broken into clearly labeled sections:
+
+```markdown
+# Instruction Retrieval Task
+
+## Domain Instructions
+[Domain-specific instructions for the task]
+
+## Retrieved Context
+[Retrieved context from textbooks or case law, if applicable]
+
+## Chain-of-Thought Examples
+[Examples with step-by-step reasoning, if applicable]
+
+## Problem to Solve
+[Actual problem the model needs to solve]
+
+Provide a step-by-step solution to this problem.
+```
+
+This structured format helps the model understand the different components of the prompt and makes it clear what needs to be answered.
 
 ## Viewing Results
 
 Results will be available in:
-- `results/math_instruction_retrieval/evaluation/` - Evaluation metrics
-- `results/math_instruction_retrieval/visualizations/` - Visualizations
-- `results/math_instruction_retrieval/inference_results/` - Raw inference results
+- `results/math/` - Math experiment results
+- `results/medqa/` - MedQA experiment results
+- `results/casehold/` - CaseHOLD experiment results
+
+Each results directory contains:
+- `evaluation/` - Evaluation metrics and summaries
+- `visualizations/` - Plots and visualizations
+- `inference_results/` - Raw inference results
+
+## Project Structure
+
+```
+instruction-retrieval/
+├── README.md                 # Project overview
+├── requirements.txt          # Python dependencies
+├── src/                      # Core Python source code
+│   ├── data/                 # Data preparation and loading
+│   ├── modeling/             # Model inference, prompt runners, retrieval
+│   ├── evaluation/           # Evaluation metrics and analysis
+│   ├── tasks/                # Task orchestration for each domain
+│   └── utils/                # Utility functions
+├── scripts/                  # Command-line utilities
+├── data/                     # Lightweight resources (templates, instructions)
+└── results/                  # Generated outputs and visualizations
+```
 
 ## Troubleshooting
 
-- If answer extraction fails, run the tests:
-  ```bash
-  python -m tests.test_answer_extraction
-  ```
-
-- Check logs in `results/math_instruction_retrieval/logs/` for errors 
+- If you encounter CUDA out-of-memory errors, try reducing the batch size in the configuration files
+- Check logs in the results directories for detailed error messages
+- For retrieval issues in MedQA or CaseHOLD, verify that the corpus paths are correct in the configuration files 

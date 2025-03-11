@@ -1,0 +1,31 @@
+1. Identify each term in the function you want to differentiate. Recognize that a “term” is a piece of the function separated by addition or subtraction signs.
+
+2. Recall the power rule: if you have xⁿ, its derivative is n · x^(n-1). This applies to any variable raised to a constant power.
+
+3. When differentiating a constant (a number without a variable), the result is 0.
+
+4. Apply the sum rule: the derivative of a sum of functions is the sum of their individual derivatives.
+
+5. If you see a product of two functions, use the product rule:
+   d/dx [u(x) · v(x)] = u'(x) · v(x) + u(x) · v'(x).
+   Be sure to carefully differentiate each factor at the right step.
+
+6. If you see one function divided by another, use the quotient rule:
+   d/dx [u(x) / v(x)] = [v(x) · u'(x) - u(x) · v'(x)] / [v(x)]².
+   Carefully apply each piece of this formula to avoid mistakes.
+
+7. For composite functions (functions inside functions), use the chain rule:
+   d/dx [f(g(x))] = f'(g(x)) · g'(x).
+   Identify the “inner” function and the “outer” function first; this step helps you apply the rule correctly.
+
+8. After applying the appropriate rule(s), simplify your answer by combining like terms, factoring if needed, or reducing fractions.
+
+9. Always check your steps for common errors, like forgetting to multiply by the inner derivative in the chain rule, mixing up negative signs, or incorrectly treating constants.
+
+10. Practice with simple examples first. For instance, if you want to differentiate x³ + 4x - 7:
+   a. Differentiate x³: 3x².  
+   b. Differentiate 4x: 4.  
+   c. Differentiate -7: 0.  
+   d. Combine them: 3x² + 4.
+
+11. Remember that understanding why these rules work (e.g., from the limit definition of the derivative) can help you avoid memorization mix-ups and build deeper problem-solving skills.

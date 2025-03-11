@@ -1,0 +1,13 @@
+1. Examine the polynomial to determine its degree (the highest exponent).  
+2. Simplify the polynomial if necessary, combining like terms and putting it into standard form.  
+3. If the polynomial is quadratic (degree 2):  
+   a. Try to factor it by finding two numbers that multiply to the constant term and add to the coefficient of the linear term, if it factors easily.  
+   b. If factoring directly is not possible, use the quadratic formula:  
+      x = (-b ± √(b² - 4ac)) / (2a).  
+4. If the polynomial is cubic (degree 3) or higher:  
+   a. Look for a common factor that can be factored out.  
+   b. Apply techniques such as grouping, synthetic division, or the Rational Root Theorem to find potential rational roots.  
+   c. Use polynomial long division or synthetic division with any discovered roots to reduce the polynomial’s degree.  
+   d. Continue factoring the reduced polynomial.  
+5. If factoring is not straightforward, consider numerical methods (graphing, numerical root approximation methods) to approximate any irrational or complex roots.  
+6. After finding each root, check it by substituting it back into the original polynomial to verify that it satisfies the equation.

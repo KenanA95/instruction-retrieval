@@ -1,0 +1,7 @@
+1. Identify the function you want to differentiate and the specific variable with respect to which you are differentiating.  
+2. Rewrite the function in a form best suited for differentiation (for example, expand products where feasible and express radicals as exponents).  
+3. Apply the sum and difference rules by differentiating each term separately, keeping in mind any multiplied constants remain as factors.  
+4. Use the power rule for any terms of the form x^n, the product rule for products of functions, the quotient rule for divisions of functions, and the chain rule for composite functions.  
+5. Combine all differentiated terms and simplify to get the derivative.  
+6. For higher-order derivatives, repeat the differentiation process on the resulting expression as many times as needed, simplifying after each differentiation step.  
+7. Always check if the result can be further simplified (for instance, by factoring out common terms).  
