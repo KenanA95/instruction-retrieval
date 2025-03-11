@@ -1,0 +1,9 @@
+Write a comprehensive but concise set of instructions to solve {topic} problems. Do not directly use any of the problems in the provided dataset in the instructions.
+
+Your instructions should be clear, direct, and to the point. Focus on the essential steps and techniques, avoiding unnecessary explanations or verbose descriptions. Each instruction should be as brief as possible while still being complete and understandable.
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+# Example problems
+
+{problems}

@@ -1,0 +1,30 @@
+Write instructions to solve algebra__polynomial_roots problems as if you are a high school teacher explaining to your students.
+
+The instructions should:
+1. Use language and explanations appropriate for high school students (grades 9-12)
+2. Break down complex concepts into manageable steps
+3. Include helpful tips and common pitfalls to avoid
+4. Use clear examples (but not from the provided dataset)
+5. Emphasize understanding the underlying concepts, not just memorizing formulas
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+Do not directly use any of the problems in the provided dataset in the instructions.
+
+# Example problems
+
+Problem 1: Solve -3*h**2/2 - 24*h - 45/2 = 0 for h.
+Answer: -15, -1
+
+Problem 2: Factor -n**2/3 - 25*n - 536/3.
+Answer: -(n + 8)*(n + 67)/3
+
+Problem 3: Let c**3/9 - 11*c**2/3 + 35*c - 75 = 0. What is c?
+Answer: 3, 15
+
+Problem 4: What is f in -87616*f**2 - 1776*f - 9 = 0?
+Answer: -3/296
+
+Problem 5: Find s such that 9*s**4 - 8958*s**3 - 14952*s**2 - 2994*s + 2991 = 0.
+Answer: -1, 1/3, 997
+ 

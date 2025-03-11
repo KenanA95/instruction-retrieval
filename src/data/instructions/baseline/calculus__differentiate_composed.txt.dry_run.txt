@@ -1,0 +1,11 @@
+Write a comprehensive set of instructions to solve calculus__differentiate problems. Do not directly use any of the problems in the provided dataset in the instructions.
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+# Example problems
+
+Problem 1: Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.
+Answer: 8*d**3 - 70*d
+
+Problem 2: Find the third derivative of -a**3*g**3*t**3 + 642*a**3*g*t**3 + 16*a**3*g*t**2 - 5*a**2*t**2 + a*g**3 wrt t.
+Answer: -6*a**3*g**3 + 3852*a**3*g

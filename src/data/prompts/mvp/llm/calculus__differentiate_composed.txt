@@ -1,0 +1,31 @@
+Step 1: Identify the variable of differentiation.  
+• IMPORTANT: Treat all other symbols as constants.  
+• NOTE: Confirm which variable is the “independent” variable.
+
+Step 2: Rewrite the expression to isolate each term clearly.  
+• IMPORTANT: Ensure each term is expressed in a form suitable for differentiation (e.g., as a power).
+
+Step 3: For each term, apply the appropriate differentiation rule.  
+• Power Rule: d/dx [c·x^n] = c·n·x^(n-1).  
+• Constant Term: d/dx [constant] = 0.  
+• Product Rule: d/dx [u·v] = u'·v + u·v' (if needed).  
+• Chain Rule: d/dx [f(g(x))] = f'(g(x))·g'(x) (if needed).  
+• NOTE: Carefully track negative exponents and fractional exponents.
+
+Step 4: Sum or Difference Rule.  
+• d/dx [u ± v] = u' ± v'.  
+• IMPORTANT: Preserve signs accurately to avoid sign errors.
+
+Step 5: Handle edge cases and check for common errors.  
+• Edge Case 1: If a term is a constant multiplier times the variable, keep the multiplier and reduce the exponent correctly.  
+• Edge Case 2: If the expression is 0 or the variable does not appear in a term, that term’s derivative is 0.  
+• Edge Case 3: If a function is piecewise or involves absolute values, verify domain conditions (if applicable).
+
+Step 6: Combine and simplify the resulting derivative.  
+• Collect like terms carefully.  
+• IMPORTANT: Keep each term in its simplest form.
+
+Step 7: Verify correctness of each step.  
+• Check that exponents have been reduced by 1 wherever the power rule was used.  
+• Confirm signs and coefficients match the original function’s structure.  
+• If needed, substitute a small numeric value for the variable to compare approximate slopes before and after differentiation (optional numerical check).

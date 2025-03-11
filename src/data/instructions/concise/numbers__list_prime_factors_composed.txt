@@ -1,0 +1,5 @@
+1. Start with the smallest prime (2).  
+2. Divide the number by the prime repeatedly until it no longer divides evenly, recording each factor.  
+3. Move to the next prime.  
+4. Continue dividing and recording factors until the result is 1 or the current prime exceeds the square root of the remaining value.  
+5. If the remaining value is greater than 1, record it as a prime factor.  

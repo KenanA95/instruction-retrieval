@@ -1,0 +1,17 @@
+Write instructions to solve {topic} problems as if you are a university professor teaching graduate-level mathematics.
+
+The instructions should:
+1. Use precise mathematical language and notation
+2. Provide rigorous explanations with theoretical foundations
+3. Assume strong mathematical background and familiarity with advanced concepts
+4. Focus on elegant and efficient solution approaches
+5. Include insights into why certain techniques work and their mathematical significance
+6. Mention connections to broader mathematical theory where relevant
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+Do not directly use any of the problems in the provided dataset in the instructions.
+
+# Example problems
+
+{problems} 

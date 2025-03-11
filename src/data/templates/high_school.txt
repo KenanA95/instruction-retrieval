@@ -1,0 +1,16 @@
+Write instructions to solve {topic} problems as if you are a high school teacher explaining to your students.
+
+The instructions should:
+1. Use language and explanations appropriate for high school students (grades 9-12)
+2. Break down complex concepts into manageable steps
+3. Include helpful tips and common pitfalls to avoid
+4. Use clear examples (but not from the provided dataset)
+5. Emphasize understanding the underlying concepts, not just memorizing formulas
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+Do not directly use any of the problems in the provided dataset in the instructions.
+
+# Example problems
+
+{problems} 

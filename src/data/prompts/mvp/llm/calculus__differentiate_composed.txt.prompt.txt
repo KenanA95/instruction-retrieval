@@ -1,0 +1,32 @@
+Write instructions to solve calculus__differentiate problems that are specifically optimized for a language model to follow.
+
+The instructions should:
+1. Be structured in a clear, step-by-step format that's easy for an LLM to parse and follow
+2. Use explicit markers and signposting (e.g., "Step 1:", "IMPORTANT:", "NOTE:")
+3. Break complex reasoning into atomic steps with clear transitions
+4. Include explicit instructions for handling edge cases and common errors
+5. Use consistent terminology and notation throughout
+6. Minimize ambiguity by being precise about what operations to perform when
+7. Include verification steps to check the correctness of intermediate results
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+Do not directly use any of the problems in the provided dataset in the instructions.
+
+# Example problems
+
+Problem 1: Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.
+Answer: 8*d**3 - 70*d
+
+Problem 2: Find the third derivative of -a**3*g**3*t**3 + 642*a**3*g*t**3 + 16*a**3*g*t**2 - 5*a**2*t**2 + a*g**3 wrt t.
+Answer: -6*a**3*g**3 + 3852*a**3*g
+
+Problem 3: What is the second derivative of 12518*f**3 + 3760*f?
+Answer: 75108*f
+
+Problem 4: What is the third derivative of -t**4 - 880*t**3 + 152*t**2 wrt t?
+Answer: -24*t - 5280
+
+Problem 5: What is the second derivative of 2*c*n**2*z**3 + 30*c*n**2 + 2*c*n*z**2 - 2*c + n**2*z**2 - 3*n*z**3 - 2*n*z wrt n?
+Answer: 4*c*z**3 + 60*c + 2*z**2
+ 

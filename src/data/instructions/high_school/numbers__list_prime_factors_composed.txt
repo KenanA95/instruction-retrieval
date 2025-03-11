@@ -1,0 +1,18 @@
+1. Choose a number you want to factor into primes. Always begin by trying to divide by the smallest prime number, which is 2.  
+2. If 2 divides your number evenly (i.e., there is no remainder), then 2 is a prime factor. Continue dividing by 2 until the result is no longer divisible by 2.  
+3. When 2 no longer divides the number, move on to the next prime number, which is 3. Repeat the same process, testing divisibility and dividing as many times as possible.  
+4. Continue checking and dividing by each subsequent prime number (5, 7, 11, 13, …) until the result is reduced to 1 or until the remaining number itself is a prime.  
+5. List all the distinct primes that divided your number during this process. These are the number’s prime factors.  
+
+Tips and Pitfalls:  
+• A common mistake is to jump to larger prime numbers too quickly. Always move in order of increasing primes to avoid missing any factors.  
+• If the number is large, you only need to test primes up to its square root. Any factor larger than the square root would have already appeared as a smaller factor.  
+• Be careful to keep dividing by the same prime factor until it no longer works before moving on.  
+• Check your final set of prime factors by multiplying them together to ensure you get the original number.  
+
+Example (not from the provided data):  
+• Suppose you want to factor 84.  
+• Start with 2: 84 ÷ 2 = 42, so 2 is a prime factor. Keep dividing by 2 as long as it works: 42 ÷ 2 = 21, which still works. Then 21 ÷ 2 is not an integer, so move on.  
+• Next check 3: 21 ÷ 3 = 7, so 3 is a prime factor. 7 ÷ 3 is not an integer, so move on.  
+• The next prime is 5, which doesn’t divide 7. Then 7 is itself prime, so you stop.  
+• The distinct prime factors are 2, 3, and 7.

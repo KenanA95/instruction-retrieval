@@ -1,0 +1,11 @@
+1) Recall the Fundamental Theorem of Arithmetic, which guarantees the unique factorization of any integer n ≥ 2 into primes (up to ordering).  
+2) Ensure n ≥ 2; if n ≤ 1, no prime factorization exists.  
+3) For a straightforward approach, use trial division:  
+   a) Initialize a factor candidate p = 2.  
+   b) While p ≤ √n, check divisibility of n by p.  
+   c) If p divides n, record p and replace n with n / p; repeat until n is no longer divisible by p.  
+   d) Increment p to the next integer (if p = 2, proceed to 3; then increment by 2 for efficiency).  
+4) If n > 1 at the end of the trial division, n itself is prime and should be included among the factors.  
+5) For large n, more sophisticated factorization algorithms (e.g., Pollard’s Rho, Quadratic Sieve, or Elliptic Curve Factorization) may be employed to reduce computational complexity.  
+6) Note that these methods exploit various number-theoretic properties, such as the structure of residue classes, to find nontrivial divisors faster than naive trial division.  
+7) Recognize that prime factorization underlies numerous applications in algebraic number theory, cryptography, and complexity theory, illustrating the broad relevance of factoring techniques.  

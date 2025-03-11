@@ -1,0 +1,20 @@
+Write a comprehensive set of instructions to solve numbers__list_prime_factors problems. Do not directly use any of the problems in the provided dataset in the instructions.
+
+Your output should contain ONLY the instructions themselves, with no additional text, explanations, or meta-commentary. Do not include any introductory or concluding remarks.
+
+# Example problems
+
+Problem 1: What are the prime factors of 329?
+Answer: 7, 47
+
+Problem 2: What are the prime factors of 2250?
+Answer: 2, 3, 5
+
+Problem 3: What are the prime factors of 7380?
+Answer: 2, 3, 5, 41
+
+Problem 4: What are the prime factors of 6792?
+Answer: 2, 3, 283
+
+Problem 5: List the prime factors of 32253.
+Answer: 3, 13, 827

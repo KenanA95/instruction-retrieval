@@ -1,0 +1,31 @@
+Step 1: Identify the Input Number  
+• Let the integer to be factored be denoted by N.  
+• IMPORTANT: If N is less than 2, note that there are no prime factors. In this case, stop.
+
+Step 2: Handle Negative Values  
+• If N is negative, temporarily convert it to its absolute value for factorization.  
+• NOTE: Record that the prime factors are the same as if N were positive.
+
+Step 3: Initialize a List of Prime Factors  
+• Create an empty list or container named prime_factors.
+
+Step 4: Divide Out Factor 2 (the Smallest Prime)  
+• While N is divisible by 2, append 2 to prime_factors and update N by dividing N by 2.
+
+Step 5: Divide Out Odd Candidates  
+• Set a divisor variable d to 3.  
+• While d × d ≤ N, do the following:  
+  • If N is divisible by d, append d to prime_factors and update N by dividing N by d.  
+  • Otherwise, increase d by 2 (move on to the next odd number).
+
+Step 6: Check If the Remaining N Is Greater Than 1  
+• If after the above steps N is still greater than 1, it must be a prime factor.  
+• Append N to prime_factors.
+
+Step 7: Verify the Result  
+• Multiply all numbers in prime_factors together.  
+• IMPORTANT: Confirm the product equals the original absolute value of N.  
+• If the product does not match, re-check each division step for errors.
+
+Step 8: Return or List the prime_factors  
+• Present the prime_factors list as the final answer.

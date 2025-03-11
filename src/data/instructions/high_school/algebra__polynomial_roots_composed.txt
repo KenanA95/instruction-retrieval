@@ -1,0 +1,22 @@
+1. Make sure the polynomial is written in standard form (all terms on one side set equal to 0, ordered by descending exponent). For instance, if you have a problem like x² + 5x + 6 = 0, confirm it’s already set to zero and in the correct order.
+
+2. Look for a Greatest Common Factor (GCF). If there is any factor common to all terms, factor it out first. For example, if you have 2x³ + 4x², you can factor out 2x², simplifying it to 2x²(x + 2).
+
+3. Attempt to factor the polynomial. For quadratics (degree 2), see if it can be factored into two binomials. Example: x² + 5x + 6 factors to (x + 2)(x + 3).  
+   – If factoring isn’t obvious or possible, consider the quadratic formula x = (-b ± √(b² - 4ac)) / (2a), where a, b, and c are the coefficients of x², x, and the constant term, respectively.
+
+4. For higher-degree polynomials, try methods such as:  
+   – Grouping: Split the middle terms into groups that share common factors.  
+   – Polynomial division or synthetic division if you suspect a particular root or if you use the Rational Root Theorem (possible rational roots are the factors of the constant term divided by the factors of the leading coefficient).
+
+5. Check for sign errors carefully. Mistakes with negative signs often lead to wrong factors or incorrect solutions. Write down each step clearly and double-check arithmetic.
+
+6. After factoring or using a formula, set each factor equal to 0 to find the roots. For instance, if (x - 2)(x + 3) = 0, the solutions are x = 2 or x = -3.
+
+7. Recognize that some polynomials may have complex roots if the discriminant (b² - 4ac) is negative (in the case of quadratics) or if factoring indicates complex solutions. Include these when asked to find all roots.
+
+8. Always verify solutions by plugging them back into the original polynomial equation. This helps catch mistakes from earlier steps.
+
+9. If you have trouble factoring, consider the possibility of prime polynomials (polynomials that cannot be factored over the real numbers) and then use the appropriate formula or numerical methods.
+
+10. Remember the goal is to understand why each step works, rather than just memorizing formulas. Ask yourself why setting each factor to zero finds the solutions or why we use the quadratic formula when factoring isn’t straightforward. This deeper understanding helps in solving more challenging polynomials.

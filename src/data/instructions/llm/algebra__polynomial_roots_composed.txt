@@ -1,0 +1,36 @@
+Step 1: Identify the polynomial and ensure it is set equal to zero  
+• Rewrite the equation so that all terms are on one side of the equation, resulting in a standard form “Polynomial = 0.”  
+• IMPORTANT: Combine like terms if necessary, to avoid having the same power of the variable appearing multiple times.  
+
+Step 2: Determine the degree of the polynomial  
+• If the polynomial is quadratic (degree 2), prepare to use factoring methods or the quadratic formula.  
+• If the polynomial is cubic (degree 3) or higher, consider factoring by grouping, synthetic division, or the Rational Root Theorem.  
+
+Step 3: Factor out any common factor (if present)  
+• Check if there is a greatest common factor (GCF) among all terms.  
+• NOTE: Even if the GCF is a constant or a negative sign, factoring it out can simplify the remaining polynomial.  
+
+Step 4: Attempt appropriate factoring techniques or formulas  
+• For quadratic polynomials, try to factor into two binomials. If factoring by inspection fails, use the quadratic formula:  
+  x = (−b ± √(b² − 4ac)) / (2a)  
+• For cubic or higher-degree polynomials:  
+  1. Try grouping terms to factor.  
+  2. Use the Rational Root Theorem by testing possible roots ±(factors of constant term)/(factors of leading coefficient).  
+  3. Perform synthetic or polynomial long division to reduce the polynomial’s degree each time a valid root is found.  
+
+Step 5: Carefully track any special conditions or edge cases  
+• If the leading coefficient is zero after factoring out terms, the polynomial degree might be lower than it appears.  
+• If the polynomial becomes a single variable term after factoring (e.g., ax = 0), solve for x directly.  
+• IMPORTANT: Watch out for repeated factors, which result in repeated roots.  
+
+Step 6: Solve for the roots based on the factoring or formula results  
+• For each factor set to zero, solve the resulting simple equation (e.g., x + 3 = 0 → x = −3).  
+• If the discriminant (b² − 4ac) is negative in a quadratic, note that the polynomial has complex roots.  
+
+Step 7: Verify each potential solution by substitution  
+• Plug each root back into the original polynomial to confirm it yields zero (or a negligible value within computational tolerance).  
+• NOTE: If a candidate solution does not satisfy the original equation, discard it as an extraneous root.  
+
+Step 8: Present all valid solutions  
+• List all real and/or complex roots found, using consistent notation.  
+• Arrange multiple solutions in a clear, conventional order (e.g., numeric ascending order for real roots).  

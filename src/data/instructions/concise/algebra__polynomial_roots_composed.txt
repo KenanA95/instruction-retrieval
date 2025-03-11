@@ -1,0 +1,7 @@
+Rewrite the polynomial in standard form, combining like terms if needed.  
+Factor out any greatest common divisor.  
+For quadratics, attempt factoring or use the quadratic formula to find roots.  
+For higher-degree polynomials, apply the Rational Root Theorem to identify possible rational roots.  
+Use synthetic or long division to test each candidate root and reduce the degree of the polynomial as roots are found.  
+Continue factoring or solving the reduced polynomials until fully decomposed.  
+Substitute each root into the original equation to verify correctness.  
